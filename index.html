@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/icon-font.css">
+        <link rel="stylesheet" type="text/css" href="css/icon-font.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/Trouvaille-favicon.png">
+        
+        <title>Trouvaille | Discover Nature with Adventure and Excitement</title>
+
+        <script type="text/javascript" src="script/main.js"></script>
+
+    </head>
+    <body>
+        <!--
+            NOTE: In the whole project i will follow the Block Element Modifier (BEM) Architecture to name my classes!
+        -->
+        <!--Navigation Section-->
+        <div class="navigation">
+            <input class="navigation__checkbox" type="checkbox" id="navi-toggle"></input>
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-tours">
+                            <span>1.</span>most&nbsp;&nbsp;popular&nbsp;&nbsp;tours
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-features">
+                            <span>2.</span>tour&nbsp;&nbsp;benifits
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-stories">
+                            <span>3.</span>customer&nbsp;&nbsp;stories
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-book">
+                            <span>4.</span>contact&nbsp;&nbsp;us
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#footer">
+                            <span>5.</span>about&nbsp;&nbsp;trouvaille
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--Header Section-->
+        <header class="header">
+            <div class="header__logo-box">
+                <a href="index.html" title="Main_Page">
+                    <img src="img/logo-white.png" alt="Logo" class="header__logo">
+                    <span class="header__title">Trouvaille</span>
+                </a>
+            </div>
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                <span class="heading-primary--main">discover</span>
+                <span class="heading-primary--sub u-margin-left-header">the beauty of nature</span>
+                </h1>
+                <a href="#section-tours" class="btn btn--white btn--animated">
+                    discover&nbsp;&nbsp;our&nbsp;&nbsp;tours
+                </a>
+            </div>
+        </header>
+        <!--Main Section-->
+        <main>
+            <section class="section-about">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                    you are about to fall in love with nature
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                        One touch of nature makes the whole world kin.
+                        </h3>
+                        <p class="paragraph">
+                            We need to find God, and he cannot be found in noise and restlessness. God is the friend of silence. See how nature - trees, flowers, grass- grows in silence; see the stars, the moon and the sun, how they move in silence... We need silence to be able to touch souls&nbsp;&nbsp;-&nbsp;&nbsp;
+                            <span class="author">mother teresa</span>.
+                        </p>
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                        If you truly love Nature, you will find beauty everywhere.
+                        </h3>
+                        <p class="paragraph">
+                            Earth and sky, woods and fields, lakes and rivers, the mountain and the sea, are excellent schoolmasters, and teach some of us more than we can ever learn from books. Keep close to Nature's heart... and climb a mountain or spend a week in the woods&nbsp;&nbsp;-&nbsp;&nbsp;
+                            <span class="author">john lubbock</span>.
+                        </p>
+                        <a class="btn-text" href="#section-features">Know more &rarr;</a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+                            <!--Responsive images concept being followed here-->
+                            <!--Resolution Switching and Density Switching Concept-->
+                            <!--Farm-Morning-->
+                            <img srcset="img/India-Small.jpg 300w, img/India-Large.jpg 600w" alt="Photo 1 Morning" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 600px" 
+                            class="composition__photo composition__photo--p1" 
+                            src="img/India-Large.jpg">
+
+                            <!--Snow-Mountains-->
+                            <img srcset="img/Morning-Small.jpg 300w, img/Morning-Large.jpg 600w" alt="Photo 2 Snow" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 600px" 
+                            class="composition__photo composition__photo--p2" 
+                            src="img/Morning-Large.jpg">
+
+                            <!--Water Image-->
+                            <img srcset="img/Water-Small.jpg 300w, img/Water-Large.jpg 600w" alt="Photo 3 Jaipur" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 600px" 
+                            class="composition__photo composition__photo--p3" 
+                            src="img/Water-Large.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-features" id="section-features">
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-gear"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">customizations</h3>
+                            <p class="feature-box__text">
+                                We will provide you with a large number of possible customization options to make your tour package perfect for your need.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-headset"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">voice guide</h3>
+                            <p class="feature-box__text">
+                                A Voice Guide System to provide you with all the necessary information about your tour, places you can visit and safety tips.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-photo"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Camera</h3>
+                            <p class="feature-box__text">
+                                To capture your beautiful moments on the tour, we will also provide a wide range of High Definition Camera options.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-map"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Track your way</h3>
+                            <p class="feature-box__text">
+                                A complete map bundle will be provided to make sure you are on the right direction, right place and never get lost.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-tours" class="section-tours">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">our trending tours</h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">&nbsp;</div>
+                                <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1">
+                                    visit to<br/>vellore
+                                </span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>5 day tour</li>
+                                        <li>up to 15 person</li>
+                                        <li>Hotel: &#9733;&#9733;&#9733;&#9733;&#9733; </li>
+                                        <li>Voice Guide + Camera + More</li>
+                                        <li>Popularity: High</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">just for</p>
+                                        <div class="card__price-value">&#8377;79,000*</div>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Book Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">&nbsp;</div>
+                                <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">
+                                    explore<br/>jaipur
+                                </span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>10 day tour</li>
+                                        <li>up to 25 person</li>
+                                        <li>Hotel: &#9733;&#9733;&#9733;&#9733;&#9733; </li>
+                                        <li>Voice Guide + Camera + more</li>
+                                        <li>popularity: high</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">just for</p>
+                                        <div class="card__price-value">&#8377;99,000*</div>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Book Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">&nbsp;</div>
+                                <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--3">
+                                    visit to<br/>leh&nbsp;&nbsp;ladakh
+                                </span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>7 day tour</li>
+                                        <li>up to 15 person</li>
+                                        <li>dome tents</li>
+                                        <li>Voice Guide + Camera + More</li>
+                                        <li>popularity: high</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">just for</p>
+                                        <div class="card__price-value">&#8377;1,20,000*</div>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Book Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="#section-tours" class="btn btn--green" onclick="moreTours();">find&nbsp;&nbsp;more&nbsp;&nbsp;tours</a>
+                </div>
+            </section>
+            <section class="section-stories" id="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4">
+                        <source src="img/video.webm" type="video/webm">
+                        Your Browser does not supports video playback, can-not play video!
+                    </video>
+                </div>
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">what our customers think about us</h2>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="img/customers/Mayank.jpg"  class="story__img" alt="Person on the tour!">
+                            <figcaption class="story__caption">
+                            mayank shevkani
+                            </figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">
+                            i had one of the best experience of my life.
+                            </h3>
+                            <p>
+                                I went to Leh-Ladakh with my friends and seriously i enjoyed a lot there not just beacuse i had my friends with me but also because of all the facilities provided to use with the tour package. I recommend all to choose this package.<br/>- Mayank Shevkani
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="img/customers/Kunal.jpg"  class="story__img" alt="Person on the tour!">
+                            <figcaption class="story__caption">
+                            kunal gurnani
+                            </figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">
+                            a time well spent with my family!
+                            </h3>
+                            <p>
+                                One of my close friend told me about this great website and then i decided to take a chance and go for their service, i honestly loved it. My tour was awesome and i will recommend all to give this a try.
+                                <br/>- Kunal Gurnani
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="pages/Reviews.html" class="btn-text">read more stories &rarr;</a>
+                </div>
+            </section>
+            <section class="section-book" id="section-book">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <form class="form" id="form1" name="form1" action="#section-book" method="get" onsubmit="verify()">
+                                <div class="u-margin-bottom-medium">
+                                    <h2 class="heading-secondary">query? contact us!</h2>
+                                </div>
+                                <div class="form__group">
+                                    <input class="form__input" type="text" placeholder="Full Name" required id="fname">
+                                    </input>
+                                    <label class="form__label" for="fname">Full Name:</label>
+                                </div>
+                                <div class="form__group">
+                                    <input class="form__input" type="email" placeholder="Email Address" required id="email" id="user_email" name="user_email">
+                                    </input>
+                                    <label class="form__label" for="email">Email Address:</label>
+                                </div>
+                                <!--Radio Buttons-->
+                                <div class="form__group u-margin-bottom-medium">
+                                    <div class="form__radio-group">
+                                        <input class="form__radio-input" type="radio" id="stour" name="gsize">
+                                        </input>
+                                        <label class="form__radio-label" for="stour">
+                                            <span class="form__radio-button"></span>
+                                            Package Related
+                                        </label>
+                                    </div>
+                                    <div class="form__radio-group">
+                                        <input class="form__radio-input" type="radio" id="ltour" name="gsize">
+                                        </input>
+                                        <label class="form__radio-label" for="ltour">
+                                            <span class="form__radio-button"></span>
+                                            Price Related
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <button class="btn btn--green">send query &rarr;</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--Footer Section-->
+        <footer class="footer" id="footer">
+            <div class="footer__logo-box">
+                <picture class="footer__logo">
+                    <img class="footer__logo" alt="Footer Logo" src="img/logo-white.png">
+                </picture> 
+            </div>
+            <div class="footer__logo-name">trouvaille</div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="pages/Page_under_construction.html" class="footer__link">About us</a></li>
+                            <li class="footer__item"><a href="#section-book" class="footer__link">contact</a></li>
+                            <li class="footer__item"><a href="pages/Page_under_construction.html" class="footer__link">Jobs</a></li>
+                            <li class="footer__item">
+                                <a href="#popup" class="footer__link">Terms and Conditions</a>
+                            </li>
+                            <li class="footer__item"><a href="pages/Page_under_construction.html" class="footer__link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;
+                        <a href="#" class="footer__link">trouvaille</a>&nbsp;&nbsp;2019.<br/>
+                        Designed By:&nbsp;&nbsp;
+                        <a href="#" class="footer__link">Jonas&nbsp;&nbsp;Schmedtmann</a>&nbsp;&nbsp;for his online course.<br/>
+                        Coded By:&nbsp;&nbsp;
+                        <a href="#" class="footer__link">Manas&nbsp;&nbsp;Soni</a>&nbsp;&nbsp;
+                        (manassoni7827@gmail.com).<br/><br/>
+                        NOTE:&nbsp;&nbsp;This Project is just for learning purpose and i had a great time learning new things and loved to code this!&nbsp;&nbsp;You can use the same design but remember to give credit to 
+                        <a href="#" class="footer__link">Jonas&nbsp;&nbsp;Schmedtmann</a>, the Original Designer.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!--Popup Section-->
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img class="popup__img" src="img/nature1.jpg" alt="Tour Photo">
+                    <img class="popup__img" src="img/nature2.jpg" alt="Tour Photo">
+                </div>
+                <div class="popup__right">
+                    <a class="popup__close" href="#section-tours">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">
+                        important &ndash; please read the terms and conditions carefully
+                    </h3>
+                    <p class="popup__text">
+                        This Site and all its Contents are intended solely for personal, non-commercial use. Except as expressly provided, nothing within the Site shall be construed as conferring any license under our or any third party's intellectual property rights, whether by estoppel, implication, waiver, or otherwise. Without limiting the generality of the foregoing, you acknowledge and agree that all content available through and used to operate the Site and its services is protected by copyright, trademark, patent, or other proprietary rights. You agree not to: (a) modify, alter, or deface any of the trademarks, service marks, trade dress (collectively "Trademarks") or other intellectual property made available by us in connection with the Site; (b) hold yourself out as in any way sponsored by, affiliated with, or endorsed by us, or any of our affiliates or service providers.
+                    </p>
+                    <a class="btn btn--green" href="pages/Page_under_construction.html">book now!</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

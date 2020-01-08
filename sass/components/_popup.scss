@@ -1,0 +1,120 @@
+/*Popup*/
+
+.popup {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba($color-black, .8);
+	z-index: 2000; // to briing the popup above all elements
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s; // to animate the closing and opening of popup
+	
+	/*Graceful Degradation Concept Followed here:*/
+	//backdrop-filter property might not work in older browsers!
+	//it not only has blur option but many other features can be applied!
+	/*this will work in safari browser only as of now! but can also work for chrome by using 
+	Expermintal web chrome flag*/
+
+	//creating a support query in order to check if this property is supoorted by the browser or not!
+	@supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+		-webkit-backdrop-filter: blur(10px);
+		background-color: rgba($color-black, .4);
+		backdrop-filter: blur(10px);
+	}
+
+
+	&__content {
+		@include absCenter; // always better to include mixins at the top
+		width: 75%;
+		overflow: hidden;
+		background-color: $color-white;
+		box-shadow: 0 2rem 4rem rgba($color-black, .2); //x, y, blur, color with opacity
+		border-radius: 3px;
+		display: table;
+		opacity: 0;
+		transform: translate(-50%,-50%) scale(.25);
+		//we cannot use two transforms so overirde is the only solution
+		transition: all .5s .2s; //.2s is delay
+	}
+
+	&__left {
+		width: 33.3333%;
+		display: table-cell;
+	}
+
+	&__right {
+		width: 66.6667%;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 3rem 5rem;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		margin-bottom: 4rem;
+
+		//new properties to make columns and format them
+
+		-moz-column-count: 2; // -moz- to make these work in mozilla
+		-moz-column-gap: 4rem;
+		-moz-column-rule: 1px solid $color-grey-light-2;
+
+		column-count: 2; //in order to create two columns for text formatting
+		column-gap: 4rem; //default size here would be the parent here as 1.4em i.e 14px
+		column-rule: 1px solid $color-grey-light-2;
+
+
+		//new property to create word hyphens
+		//values are none(deafult), manual(manually define in the text), auto;
+		//NOTE: in order to use this property define lang="en" in html tag first;
+		//this is a new property so always give prefix for such properties
+
+		-moz-hyphens: auto; //for mozilla browser
+		-ms-hyphens: auto; //for ms edge
+		-webkit-hyphens: auto; //for chrome and safari
+
+		hyphens: auto;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+	}
+
+
+	//open states of the popup
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	//to create a effect to make the popup come towards the user
+	&:target &__content {
+		opacity: 1;
+		transform: translate(-50%,-50%) scale(1);
+	}
+
+	&__close {
+
+		&:link,
+		&:visited {
+			color: $color-grey-dark;
+			position: absolute;
+			top: 2.5rem;
+			right: 2.5rem;
+			font-size: 3rem;
+			text-decoration: none;
+			display: inline-block;
+			transition: all .2s;
+			line-height: 1;
+		}
+
+		&:hover {
+			color: $color-primary;
+			// cursor: pointer;
+		}
+	}
+}

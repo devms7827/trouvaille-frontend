@@ -1,0 +1,46 @@
+/*Base*/
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html{
+	/*its not typography, its just the 1 rem setting for the page*/
+	font-size: 62.5%;
+	/* NOTE:
+		we wanted a default for us as 10px, but browser default is 16, so 10/16*100% is 62.5% which 
+		will be 10px in short but we should not write size in pixels in order to make the size
+		responsive;
+	*/
+
+	/*@include respond(phone) {
+		font-size: 50%;			//commented because this is same as the tab-port!
+	}*/
+
+	//NOTE: Always put the larger screen size media query before the smaller ones!;
+
+	@include respond(tab-land) {	//if width < 1200
+		font-size: 56.25%;			//we need 1 rem = 9px, so 9px/16px=56.25%
+	}
+
+	@include respond(tab-port) {	//if width < 900
+		font-size: 50%;				//we need 1 rem = 8px, so 8px/16px=50%
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%;				//we need 1 rem = 12px, so 12px/16px=75%
+	}
+}
+
+body {
+	box-sizing: border-box;
+	padding: 3rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
+}

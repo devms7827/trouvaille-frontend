@@ -1,0 +1,77 @@
+/*Mixins*/
+
+/*to clearfix the height issue of the row*/
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/*to create absolute position in center*/
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/*
+Media Query Starts Here:-----------------------x
+
+Device Size and Breakpoints we are creating!
+
+(These three will be written in max-width media query!)
+0 - 600px:		for Phone;
+600px - 900px	for Portrait Tablets
+900px - 1200px	for Landscape Tablets
+
+1200px - 1800px Normal Styles will apply!
+
+(This will be written in min-width media query!)
+1800px+			for Big Desktops
+
+NOTE: @content is a saas directive that will allow us to pass the code block to this mixin!
+NOTE: @if is also a sass directive that allows to cerate if logic for conditions;
+
+Breakpoint arguments choice:----------------x
+1. phone
+2. tab-port
+3. tab-land
+4. big-desktop
+
+Media Query Manager:------------------x
+
+Note Always use em's in media query not rem's
+1em=16px(default browser font size) 
+so divide:
+600 / 16 = 37.5em 		for phone
+900 / 16 = 56.25em 		for tab-port
+1200/ 16 = 75em 		for tab-land
+1800/ 16 = 112.5em		for big-desktops
+
+Order to be foolowed in order to write media query!
+Base + Typography then General Layout + Grid then Page Layout then Components
+
+*/
+
+@mixin respond($breakpoint) {
+
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) { @content };	//600px
+	}
+
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) { @content };	//900px
+	}
+
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) { @content };		//1200px
+	}
+
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) { @content };		//1800px
+	}
+}

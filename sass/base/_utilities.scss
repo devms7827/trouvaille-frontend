@@ -1,0 +1,55 @@
+/*Utility Classes*/
+
+//to center a text
+.u-center-text {
+	text-align: center !important;
+}
+
+//for medium margins
+.u-margin-bottom-small {
+	margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+	margin-bottom: 4rem !important;
+
+	@include respond(tab-port) {
+		margin-bottom: 3rem !important;
+	}
+}
+
+.u-margin-bottom-big {
+	margin-bottom: 8rem !important;
+
+	@include respond(tab-port) {
+		margin-bottom: 5rem !important;
+	}
+}
+
+//for big margins
+.u-margin-top-big {
+	margin-top: 8rem !important;
+}
+.u-margin-top-huge {
+	margin-top: 10rem !important;
+}
+
+.u-margin-left-header {
+	margin-left: -1.5rem;
+}
+
+@include respond(phone) {
+	.u-margin-left-header {
+		margin-left: -1rem;
+	}
+}
+
+//for top margin
+.u-margin-top-decrease {
+	margin-top: -12rem;
+}
+
+.u-margin-top-increase {
+	margin-top: 5rem !important;
+}
+//NOTE: these are utility classes so we can use !important keyword in order to over rule specificity;

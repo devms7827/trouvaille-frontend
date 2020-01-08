@@ -1,0 +1,31 @@
+/* Sassy CSS Start Here:*/
+
+/*implmenting 7-1 Architecture files*/
+
+/*at first always import the abstracts*/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+/*second comes the base folder and then so on according to the 7-1 architecture folders*/
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/bg-video";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";
+@import "pages/puc";

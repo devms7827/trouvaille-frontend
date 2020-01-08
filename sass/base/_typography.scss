@@ -1,0 +1,118 @@
+/*Typography*/
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	/* font-size: 16px; */
+	line-height: 1.7;
+	color: $color-grey-dark;
+}
+
+.heading-primary{
+	color: $color-white;
+	text-transform: uppercase;
+	margin-bottom: 6rem;
+	backface-visibility: hidden; 
+	/*to remove the shakiness of the heading mainn moving to top at the end of the animation*/
+
+	&--main {
+		display: block;
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+
+		/*Another way to specify that altogether is:
+		(CSS will automatically identify which value is for what property)
+		animation: moveInLeft 1s ease-out;
+		*/
+
+		/*Some more animation properties that we can use:
+		animation-delay: 1s;
+		animation-iteration-count: 3;
+		*/
+
+		@include respond(phone) {
+			letter-spacing: 1rem;
+			font-family: 5rem;
+		}
+	}
+
+	&--sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+
+		animation-name: moveInRight;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+
+		@include respond(phone) {
+			letter-spacing: .5rem;
+		}
+	}
+}
+
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block;
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: all .2s;
+	letter-spacing: .2rem;
+
+	@include respond(tab-port) {
+		font-size: 3rem;
+	}
+
+	@include respond(phone) {
+		font-size: 2.5rem;
+	}
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1); //rotate it 2 deg Y, 15 deg X and 110% scaling
+		text-shadow: .5rem 1rem 2rem rgba($color-black, .2); //x,y,blur,color with opacity
+	}
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
+
+.author {
+	text-transform: capitalize;
+	font-size: 1.6rem;
+}
+
+.greeting {
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	color: $color-white;
+	text-transform: capitalize;
+	text-align: center;
+	margin-top: -5rem;
+
+	&__main {
+		font-size: 3rem;
+	}
+
+	&__heart {
+		color: $color-heart;
+	}
+}
